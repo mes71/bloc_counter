@@ -17,7 +17,7 @@ jobs:
           distribution: 'zulu'
           java-version: '11'
       - name: Check out flutter action
-        uses: subosito/flutter-action@v2
+        uses: subosito/flutter-action@v3
         with:
           channel: 'stable' # or: 'beta', 'dev' or 'master'
       - run: flutter --version
