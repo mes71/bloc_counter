@@ -10,6 +10,12 @@ jobs:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v3
+
+      - name: Setup java ☕
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
       - name: Check out flutter action
         uses: subosito/flutter-action@v2
         with:
@@ -17,4 +23,4 @@ jobs:
       - run: flutter --version
       - run: flutter pub get
       - run: flutter test
-      - run: flutter test integration_test
+      - run: flutter integration test
