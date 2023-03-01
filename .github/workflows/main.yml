@@ -10,8 +10,11 @@ on:
 
 jobs:
   build:
+    name: flutter build
     runs-on: ubuntu-latest
-
+    env:
+      JAVA_VERSION: "11.0"
+      FLUTTER_VERSION: "2.5.3"
   steps:
   - uses: actions/checkout@v3
   - uses: subosito/flutter-action@v2
