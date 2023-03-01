@@ -16,6 +16,7 @@ jobs:
       JAVA_VERSION: "11.0"
       FLUTTER_VERSION: "3.7.3"
   steps:
+  - uses: actions/checkout@v3
   - uses: subosito/flutter-action@v2
     with:
       channel: 'stable'
